@@ -1,36 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Task 4: Implement Authentication with Protected Routes in Next.js 14 
 
-## Getting Started
+Objective:
 
-First, run the development server:
+Set up authentication in a Next.js 14 application and protect certain routes, demonstrating an understanding of both client-side and server-side rendering.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Requirements:
+Login Page: Create a simple login page where users can enter a username and password. Authentication logic can be basic (e.g., match against a hardcoded user).
+Protected Route: Implement a protected dashboard route that only authenticated users can access. If a user is not authenticated, they should be redirected to the login page.
+Session Handling: Use cookies or JWTs to manage the user's session, ensuring that the authentication state persists across page reloads.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Testing:
+Write tests to verify that unauthenticated users are redirected to the login page when trying to access the protected route.
+Test the login process to ensure that users are properly authenticated and redirected to the dashboard upon successful login.
