@@ -4,6 +4,17 @@ Testing Screenshot:
 ![Screenshot 2024-08-29 141757](https://github.com/user-attachments/assets/979fc85a-d381-4dde-b49f-8c799b6966f3)
 
 
+ # Home page
+![Screenshot 2024-08-29 142713](https://github.com/user-attachments/assets/ab427e62-74fd-4fe7-8002-f6d65bb68d0c)
+
+# Login Page
+![Screenshot 2024-08-29 142737](https://github.com/user-attachments/assets/f7909fe4-383e-45c8-a979-58fd9f9eb3ed)
+
+#Dashboard
+![Screenshot 2024-08-29 142800](https://github.com/user-attachments/assets/425e7bce-cf4b-4899-a8d7-03e7e57aeac0)
+
+
+
 Task 4: Implement Authentication with Protected Routes in Next.js 14 
 
 Objective:
