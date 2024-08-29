@@ -11,8 +11,11 @@ jest.mock('js-cookie', () => ({
   set: jest.fn(),
 }));
 
+
+//test case 1
+//after sucessful login navigate to dashboard
 describe('LoginPage', () => {
-  it('authenticates users and redirects to the dashboard upon successful login', () => {
+  it('authentication and navigating to dashboard upon sucessful login', () => {
     const pushMock = jest.fn();
     useRouter.mockReturnValue({ push: pushMock });
 
@@ -31,16 +34,20 @@ describe('LoginPage', () => {
     expect(pushMock).toHaveBeenCalledWith('/dashboard');
   });
 
+
+  //test case 2
+  //if username and password doesnot match
+
   it('shows an alert on invalid login', () => {
     global.alert = jest.fn();
 
     render(<LoginPage />);
 
     fireEvent.change(screen.getByPlaceholderText(/username/i), {
-      target: { value: 'wronguser' },
+      target: { value: 'notgaurab' },
     });
     fireEvent.change(screen.getByPlaceholderText(/password/i), {
-      target: { value: 'wrongpass' },
+      target: { value: 'wrongpassword' },
     });
 
     fireEvent.click(screen.getByText(/login/i));

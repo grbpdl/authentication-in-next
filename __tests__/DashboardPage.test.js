@@ -15,15 +15,17 @@ jest.mock('js-cookie', () => ({
   remove: jest.fn(),
 }));
 
-// Mock window.alert
 global.alert = jest.fn();
 
+
+//test case 1
+//if user tries to access the dashboard without logged in
 describe('DashboardPage', () => {
-  it('should redirect unauthenticated users to the login page', async () => {
+  it('redirect unauthenteciated user to login page', async () => {
     const mockPush = jest.fn();
     useRouter.mockReturnValue({ push: mockPush });
 
-    Cookies.get.mockReturnValue(null); // Simulate no auth cookie
+    Cookies.get.mockReturnValue(null); // cookie is null indicating user is not logged in
 
     render(<DashboardPage />);
 
@@ -33,11 +35,14 @@ describe('DashboardPage', () => {
     });
   });
 
-  it('should render the dashboard for authenticated users', async () => {
+
+  //test case 2
+  //goto dashboard for authenticated user
+  it('navigate to user if user is logged in and authenticated', async () => {
     const mockPush = jest.fn();
     useRouter.mockReturnValue({ push: mockPush });
 
-    Cookies.get.mockReturnValue('true'); // Simulate auth cookie
+    Cookies.get.mockReturnValue('true'); // setting cookie
 
     render(<DashboardPage />);
 
